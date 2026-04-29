@@ -1,0 +1,12 @@
+{
+  "name": "todobaby-desktop-widget",
+  "version": "1.0.0",
+  "description": "Desktop todo widget with calendar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

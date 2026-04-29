@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo 桌面插件</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="window-bar">
+      <div class="window-title">🧷 桌面待办挂件</div>
+      <div class="window-actions no-drag">
+        <button id="pinBtn" class="ghost">取消置顶</button>
+        <button id="minBtn" class="ghost">最小化</button>
+        <button id="closeBtn" class="danger">关闭</button>
+      </div>
+    </div>
+
+    <main class="widget" id="app">
+      <header class="topbar">
+        <h1>📌 ToDo 桌面插件</h1>
+        <div class="toolbar">
+          <select id="themeSelect" aria-label="切换风格">
+            <option value="theme-light">浅色风格</option>
+            <option value="theme-dark">深色风格</option>
+            <option value="theme-forest">森林风格</option>
+          </select>
+          <button id="clearCompletedBtn" class="ghost">清空已完成</button>
+        </div>
+      </header>
+
+      <section class="calendar-card">
+        <div class="calendar-head">
+          <button id="prevMonthBtn">◀</button>
+          <h2 id="calendarTitle"></h2>
+          <button id="nextMonthBtn">▶</button>
+        </div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </section>
+
+      <section class="todo-card">
+        <form id="todoForm" class="todo-form">
+          <input id="todoInput" type="text" placeholder="输入待办事项，例如：完成周报" required />
+          <input id="todoDate" type="date" />
+          <select id="todoPriority">
+            <option value="low">低优先级</option>
+            <option value="medium" selected>中优先级</option>
+            <option value="high">高优先级</option>
+          </select>
+          <button type="submit">添加</button>
+        </form>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="todo">待办</button>
+          <button class="tab" data-tab="done">已完成</button>
+          <button class="tab" data-tab="stats">统计</button>
+          <input id="searchInput" type="search" placeholder="搜索任务..." />
+        </div>
+
+        <ul id="todoList" class="task-list"></ul>
+        <ul id="doneList" class="task-list hidden"></ul>
+        <section id="statsPanel" class="stats hidden"></section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

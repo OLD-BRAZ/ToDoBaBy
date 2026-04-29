@@ -1,0 +1,13 @@
+{
+  "name": "todo-desktop-widget",
+  "version": "1.0.0",
+  "description": "ToDo 桌面插件（Electron 桌面版）",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}
